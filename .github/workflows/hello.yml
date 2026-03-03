@@ -15,10 +15,11 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-       - name: say hello to GitHub
+       -name: say hello to GitHub
        -run: echo "Hello from GitHub Actions!"
        
        -name: Checkout Code 
+        uses: actions/checkout@v4 
        -uses: actions/checkout@v4 
     
 
