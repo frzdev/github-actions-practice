@@ -1,1 +1,20 @@
+# This is workflow name
 
+name: Hello
+
+on:
+  push:
+    branches: [main]
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+       - name: say hello to GitHub
+       -run: echo "Hello from GitHub Actions!"
+       
+       -name: Checkout Code 
+       -uses: actions/checkout@v4 
+    
+
+    
+    
