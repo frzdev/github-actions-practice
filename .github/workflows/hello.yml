@@ -5,6 +5,12 @@ name: Hello
 on:
   push:
     branches: [main]
+    
+permissions:
+    pages: write      
+    id-token: write   
+    contents: read
+    
 jobs:
   greet:
     runs-on: ubuntu-latest
