@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - '**.html'
-    
+# Define the jobs that will run in this workflow    
 jobs:
   greet:
    # specify the runner environment
@@ -16,18 +16,27 @@ jobs:
       # Step 1: Checkout the repository 
       - name: Checkout code
         uses: actions/checkout@v4 
+      
        # Step 2: Print greeting
       - name: greets user
         run: echo "Hello from GitHub Actions!" 
-
+        
+       # Step 3: Print the current date and time
       - name: print current date and time
         run : date
-   
+        
+      # Step 4: Print branch name
       - name: Printing name of the branch that triggered the workflow
         run: echo "Branch:" ${{ github.ref_name }}
-
+        
+      # Step 5 List repo file
       - name: Listing files in the repo
         run: ls -la
-         
+     
+      # Step 6 Print runner operating system    
       - name: printing Runner's operating system
         run: echo "Runner OS:" ${{ runner.os }}
+
+     # Step 6 Intentionally fail    
+      # - name: Break the workflow on purpose
+      #   run: exit 1
