@@ -1,0 +1,33 @@
+# Name of the worflow
+name: Hello worflow
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+    
+jobs:
+  greet:
+   # specify the runner environment
+    runs-on: ubuntu-latest
+    
+   # Steps represents of tasks executed as a part of the job
+    steps:
+      # Step 1: Checkout the repository 
+      - name: Checkout code
+        uses: actions/checkout@v4 
+       # Step 2: Print greeting
+      - name: greets user
+        run: echo "Hello from GitHub Actions!" 
+
+      - name: print current date and time
+        run : date
+   
+      - name: Printing name of the branch that triggered the workflow
+        run: echo "Branch:" ${{ github.ref_name }}
+
+      - name: Listing files in the repo
+        run: ls -la
+         
+      - name: printing Runner's operating system
+        run: echo "Runner OS:" ${{ runner.os }}
