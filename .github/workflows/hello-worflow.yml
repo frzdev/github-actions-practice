@@ -18,8 +18,8 @@ jobs:
         uses: actions/checkout@v4 
       
        # Step 2: Print greeting
-      - name: greets user
-        run: echo "Hello from GitHub Actions!" 
+      - name: greets worflow user
+        run: echo "Hello worflow from GitHub Actions!" 
         
        # Step 3: Print the current date and time
       - name: print current date and time
