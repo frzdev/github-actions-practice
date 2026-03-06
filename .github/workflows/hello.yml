@@ -14,9 +14,4 @@ jobs:
       - name: greets user
         run: echo "Hello from GitHub Actions!" 
 
-    
-      - name: Listing files in the repo
-        run: ls -la
-         
-      - name: printing Runner's operating system
-        run: echo "Runner OS:" ${{ runner.os }}
+
