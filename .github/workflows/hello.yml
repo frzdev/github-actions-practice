@@ -2,8 +2,7 @@ name: Hello Yaml
 on:
   push:
     branches: [main]
-    paths:
-      - '**.html'
+   
     
 jobs:
   greet:
@@ -15,12 +14,7 @@ jobs:
       - name: greets user
         run: echo "Hello from GitHub Actions!" 
 
-      - name: print current date and time
-        run : date
-   
-      - name: Printing name of the branch that triggered the workflow
-        run: echo "Branch:" ${{ github.ref_name }}
-
+    
       - name: Listing files in the repo
         run: ls -la
          
