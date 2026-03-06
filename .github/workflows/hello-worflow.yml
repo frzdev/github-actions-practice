@@ -7,7 +7,7 @@ on:
       - '**.html'
 # Define the jobs that will run in this workflow    
 jobs:
-  greet:
+  greet-worflow:
    # specify the runner environment
     runs-on: ubuntu-latest
     
